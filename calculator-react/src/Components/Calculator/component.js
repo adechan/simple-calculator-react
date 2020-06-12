@@ -3,10 +3,10 @@ import styled from '@emotion/styled';
 import Display from './Display';
 import Buttons from './Buttons';
 
-const Calculator = () => {
+const Calculator = ({computedValue}) => {
     return ( 
         <> 
-        <Display />
+        <Display computedValue = {0.1}/>
         <Buttons />
         </>
     );
