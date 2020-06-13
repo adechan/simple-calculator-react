@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 
-const Button = ({value}) => {
+
+const Button = ({value, width}) => {
 
     let backgroundColour = null;
     let textColour = null;
-    let width = null;
+    let widthButton = null;
 
     // grey buttons
     if (Number.isInteger(parseInt(value)) === true)  
@@ -25,20 +26,20 @@ const Button = ({value}) => {
         textColour = `black`;
     }
 
-    if (value === '0')
+    if (width === 'wide')
     {
-        width = `50%`;
+        widthButton = `50%`;
     }
     else
     {
-        width = `25%`;
+        widthButton = `25%`;
     }
 
     const Button = styled.button`
     background-color: ${backgroundColour};
     padding: 0px;
     height: 125px;
-    width: ${width};
+    width: ${widthButton};
     border: 1px solid rgb(133, 134, 148, .45);
     color: ${textColour};
     font-family: 'Sans Sans', sans-serif;
@@ -46,10 +47,21 @@ const Button = ({value}) => {
     font-weight: normal;
     padding: 0px;
     margin: 0px;
-;
-    `
+    `;
+        
+    const [buttonClick, setButtonClick] = useState("");
+    
+    
+    const buttonClicked = () =>
+    {
+        const buttonPressed = {value}.value;
+        setButtonClick(buttonPressed);
+
+        console.log("You pressed: " + buttonPressed);
+    }
+
     return ( 
-        <Button> {value} </Button>
+        <Button onClick = {buttonClicked}> {value} </Button>
      );
 }
  

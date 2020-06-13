@@ -1,12 +1,11 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import Display from './Display';
 import Buttons from './Buttons';
 
-const Calculator = ({computedValue}) => {
+const Calculator = ({displayValue}) => {
     return ( 
         <> 
-        <Display computedValue = {0.1}/>
+        <Display displayValue = {displayValue}/>
         <Buttons />
         </>
     );

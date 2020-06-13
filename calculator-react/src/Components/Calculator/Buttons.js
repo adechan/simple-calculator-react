@@ -1,21 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import Button from './Button';
 
-const Buttons = ({value}) => {
+const Buttons = () => {
 
     const Container = styled.div`
     `
 
- 
     const Div = styled.div`
     `
-
+ 
     return ( 
         <Container> 
             <Div>
-                <Button value = 'AC' />
-                <Button value = '+/-' /> 
+                <Button value = 'AC'/>
+                <Button value = '+/-'/> 
                 <Button value = '%'/>
                 <Button value = '÷'/>
             </Div>
@@ -42,7 +41,7 @@ const Buttons = ({value}) => {
             </Div>
 
             <Div>
-                <Button value = '0'/>
+                <Button value = '0' width = 'wide'/>
                 <Button value = '.'/>
                 <Button value = '='/>
             </Div>

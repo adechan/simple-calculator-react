@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const Display = ({computedValue}) => {
+const Display = ({displayValue}) => {
 
     const Container = styled.div`
         margin: 0 auto;
@@ -22,7 +22,7 @@ const Display = ({computedValue}) => {
 
     return (  
         <Container> 
-            <Value> {computedValue} </Value>
+            <Value> {displayValue} </Value>
         </Container>
     );
 }
