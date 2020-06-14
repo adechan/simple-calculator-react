@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 
 
-const Button = ({value, width}) => {
+const Button = ({value, width, setDisplayValue}) => {
 
     let backgroundColour = null;
     let textColour = null;
@@ -48,16 +48,13 @@ const Button = ({value, width}) => {
     padding: 0px;
     margin: 0px;
     `;
-        
-    const [buttonClick, setButtonClick] = useState("");
-    
     
     const buttonClicked = () =>
     {
         const buttonPressed = {value}.value;
-        setButtonClick(buttonPressed);
 
         console.log("You pressed: " + buttonPressed);
+        setDisplayValue(buttonPressed);
     }
 
     return ( 

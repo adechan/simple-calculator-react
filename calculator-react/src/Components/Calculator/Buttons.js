@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import Button from './Button';
 
-const Buttons = () => {
+const Buttons = ({setDisplayValue}) => {
 
     const Container = styled.div`
     `
@@ -13,37 +13,37 @@ const Buttons = () => {
     return ( 
         <Container> 
             <Div>
-                <Button value = 'AC'/>
-                <Button value = '+/-'/> 
-                <Button value = '%'/>
-                <Button value = '÷'/>
+                <Button value = 'AC' setDisplayValue = {setDisplayValue}/>
+                <Button value = '+/-' setDisplayValue = {setDisplayValue}/> 
+                <Button value = '%' setDisplayValue = {setDisplayValue}/>
+                <Button value = '÷' setDisplayValue = {setDisplayValue}/>
             </Div>
 
             <Div>
-                <Button value = '7'/>
-                <Button value = '8'/>
-                <Button value = '9'/>
-                <Button value = '×'/>
+                <Button value = '7' setDisplayValue = {setDisplayValue}/>
+                <Button value = '8' setDisplayValue = {setDisplayValue}/>
+                <Button value = '9' setDisplayValue = {setDisplayValue}/>
+                <Button value = '×' setDisplayValue = {setDisplayValue}/>
             </Div>
 
             <Div>
-                <Button value = '4'/>
-                <Button value = '5'/>
-                <Button value = '6'/>
-                <Button value = '-'/>
+                <Button value = '4' setDisplayValue = {setDisplayValue}/>
+                <Button value = '5' setDisplayValue = {setDisplayValue}/>
+                <Button value = '6' setDisplayValue = {setDisplayValue}/>
+                <Button value = '-' setDisplayValue = {setDisplayValue}/>
             </Div>
             
             <Div>
-                <Button value = '1'/>
-                <Button value = '2'/>
-                <Button value = '3'/>
-                <Button value = '+'/>
+                <Button value = '1' setDisplayValue = {setDisplayValue}/>
+                <Button value = '2' setDisplayValue = {setDisplayValue}/>
+                <Button value = '3' setDisplayValue = {setDisplayValue}/>
+                <Button value = '+' setDisplayValue = {setDisplayValue}/>
             </Div>
 
             <Div>
-                <Button value = '0' width = 'wide'/>
-                <Button value = '.'/>
-                <Button value = '='/>
+                <Button value = '0' width = 'wide' setDisplayValue = {setDisplayValue}/>
+                <Button value = '.' setDisplayValue = {setDisplayValue}/>
+                <Button value = '=' setDisplayValue = {setDisplayValue}/>
             </Div>
 
         </Container>
