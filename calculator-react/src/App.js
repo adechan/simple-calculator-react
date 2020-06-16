@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Display displayValue = {displayValue}/>
-      <Buttons setDisplayValue = {setDisplayValue}/>
+      <Buttons setDisplayValue = {setDisplayValue}  displayValue = {displayValue}/>
     </div>
   );
 }

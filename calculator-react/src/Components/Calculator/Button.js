@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 
 
-const Button = ({value, width, setDisplayValue}) => {
+const Button = ({value, width, setDisplayValue, displayValue}) => {
 
     let backgroundColour = null;
     let textColour = null;
@@ -54,7 +54,27 @@ const Button = ({value, width, setDisplayValue}) => {
         const buttonPressed = {value}.value;
 
         console.log("You pressed: " + buttonPressed);
-        setDisplayValue(buttonPressed);
+        
+        if (Number.isInteger(parseInt(buttonPressed)) == true || buttonPressed === '.')
+        {
+            if (displayValue != null)
+            {
+                displayValue += buttonPressed;
+            }
+            else
+            {
+                displayValue = buttonPressed;
+            }
+
+            if (buttonPressed !== '.' && buttonPressed !== '0')
+            {
+                displayValue = '' + parseFloat(displayValue);
+            }
+
+            console.log("display value: " + displayValue);
+        }
+
+        setDisplayValue(displayValue);
     }
 
     return ( 
