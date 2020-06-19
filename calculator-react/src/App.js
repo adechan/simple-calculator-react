@@ -11,11 +11,14 @@ import './Components/Calculator/component';
 function App() {
 
   const [displayValue, setDisplayValue] = useState("0");
+  const [operation, setOperation] = useState("");
+  const [previous, setPrevious] = useState("");
+  const [next, setNext] = useState("");
 
   return (
     <div className="App">
       <Display displayValue = {displayValue}/>
-      <Buttons setDisplayValue = {setDisplayValue}  displayValue = {displayValue}/>
+      <Buttons setDisplayValue = {setDisplayValue} displayValue = {displayValue} setOperation = {setOperation} operation = {operation}/>
     </div>
   );
 }

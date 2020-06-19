@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 
 
-const Button = ({value, width, setDisplayValue, displayValue}) => {
+const Button = ({value, width, setDisplayValue, displayValue, operation, setOperation}) => {
 
     let backgroundColour = null;
     let textColour = null;
