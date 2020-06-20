@@ -58,7 +58,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
         // if the value is a NUMBER
         if (Number.isInteger(parseInt(buttonPressed)) == true || buttonPressed === '.')
         {
-            if (displayValue != null)
+            if (displayValue != null && displayValue != "0")
             {
                 displayValue += buttonPressed;
             }
@@ -80,7 +80,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
         {
             setOperation(buttonPressed);
             setPrevious(displayValue);
-            setDisplayValue(0);
+            setDisplayValue("0");
         }
 
         if (previous !== null)
@@ -90,7 +90,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
 
         if (operation !== null && buttonPressed == "=")
         {
-            let result = parseInt(previous) + parseInt(next);
+            let result = parseFloat(previous) + parseFloat(next);
 
             setDisplayValue(result);
         }
