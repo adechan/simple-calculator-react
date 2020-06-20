@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 
 
-const Button = ({value, width, setDisplayValue, displayValue, operation, setOperation}) => {
+const Button = ({value, width, setDisplayValue, displayValue, operation, setOperation, next, setNext, previous, setPrevious}) => {
 
     let backgroundColour = null;
     let textColour = null;
@@ -53,8 +53,9 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
     {
         const buttonPressed = {value}.value;
 
-        console.log("You pressed: " + buttonPressed);
+        // console.log("You pressed: " + buttonPressed);
         
+        // if the value is a NUMBER
         if (Number.isInteger(parseInt(buttonPressed)) == true || buttonPressed === '.')
         {
             if (displayValue != null)
@@ -71,10 +72,37 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
                 displayValue = '' + parseFloat(displayValue);
             }
 
-            console.log("display value: " + displayValue);
+            // console.log("display value: " + displayValue);
+        }
+        setDisplayValue(displayValue);
+
+        if (buttonPressed == '+')
+        {
+            setOperation(buttonPressed);
+            setPrevious(displayValue);
+            setDisplayValue(0);
         }
 
-        setDisplayValue(displayValue);
+        if (previous !== null)
+        {
+            setNext(displayValue);
+        }
+
+        if (operation !== null && buttonPressed == "=")
+        {
+            let result = parseInt(previous) + parseInt(next);
+
+            setDisplayValue(result);
+        }
+
+        if (buttonPressed == "AC")
+        {
+            setDisplayValue("0");
+            setOperation("");
+            setPrevious("");
+            setNext("");
+        }
+        
     }
 
     return ( 

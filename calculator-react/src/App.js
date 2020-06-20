@@ -15,10 +15,24 @@ function App() {
   const [previous, setPrevious] = useState("");
   const [next, setNext] = useState("");
 
+  console.log("display value: " + displayValue);
+  console.log("previous value: " + previous);
+  console.log("operation: " + operation);
+  console.log("next value: " + next);
+
   return (
     <div className="App">
       <Display displayValue = {displayValue}/>
-      <Buttons setDisplayValue = {setDisplayValue} displayValue = {displayValue} setOperation = {setOperation} operation = {operation}/>
+      <Buttons 
+      setDisplayValue = {setDisplayValue} 
+      displayValue = {displayValue} 
+      setOperation = {setOperation} 
+      operation = {operation}
+      previous = {previous}
+      setPrevious = {setPrevious}
+      next = {next}
+      setNext = {setNext}
+      />
     </div>
   );
 }
