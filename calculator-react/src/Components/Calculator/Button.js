@@ -48,6 +48,32 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
     padding: 0px;
     margin: 0px;
     `;
+
+    const Calculate = (operation, number1, number2) =>
+    {
+        let result = 0; 
+
+        switch(operation)
+        {
+            case '+':
+                result = number1 + number2;
+                break;
+            case '-':
+                result = number1 - number2;
+                break;
+            case '÷':
+                result = number1 / number2; 
+                break;
+            case '%':
+                result = number1 % number2;
+                break;
+            case '×':
+                result = number1 * number2;
+                break;
+        }
+
+        return result;
+    }
     
     const buttonClicked = () =>
     {
@@ -76,7 +102,11 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
         }
         setDisplayValue(displayValue);
 
-        if (buttonPressed == '+')
+        if (buttonPressed == '+' || 
+            buttonPressed == '-' || 
+            buttonPressed == '÷' ||
+            buttonPressed == '%' ||
+            buttonPressed == '×')
         {
             setOperation(buttonPressed);
             setPrevious(displayValue);
@@ -90,7 +120,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
 
         if (operation !== null && buttonPressed == "=")
         {
-            let result = parseFloat(previous) + parseFloat(next);
+            let result = Calculate(operation, parseFloat(previous), parseFloat(next));
 
             setDisplayValue(result);
         }
