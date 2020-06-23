@@ -38,7 +38,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
     const Button = styled.button`
     background-color: ${backgroundColour};
     padding: 0px;
-    height: 125px;
+    height: 8.2vw;
     width: ${widthButton};
     border: 1px solid rgb(133, 134, 148, .45);
     color: ${textColour};
