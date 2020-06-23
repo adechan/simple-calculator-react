@@ -23,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <Display displayValue = {displayValue}/>
+
       <Buttons 
       setDisplayValue = {setDisplayValue} 
       displayValue = {displayValue} 
@@ -33,6 +34,7 @@ function App() {
       next = {next}
       setNext = {setNext}
       />
+      
     </div>
   );
 }

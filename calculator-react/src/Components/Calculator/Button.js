@@ -79,10 +79,8 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
     {
         const buttonPressed = {value}.value;
 
-        // console.log("You pressed: " + buttonPressed);
-        
         // if the value is a NUMBER
-        if (Number.isInteger(parseInt(buttonPressed)) == true || buttonPressed === '.')
+        if (Number.isInteger(parseInt(buttonPressed)) == true || buttonPressed === '.' || buttonPressed == '+/-')
         {
             if (displayValue != null && displayValue != "0")
             {
@@ -96,6 +94,11 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
             if (buttonPressed !== '.' && buttonPressed !== '0')
             {
                 displayValue = '' + parseFloat(displayValue);
+            }
+
+            if (buttonPressed == '+/-')
+            {
+                displayValue = displayValue - 2 * displayValue;
             }
 
             // console.log("display value: " + displayValue);
