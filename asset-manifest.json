@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Calculator-React/public/static/css/main.2b262fa1.chunk.css",
-    "main.js": "/Calculator-React/public/static/js/main.dba17f31.chunk.js",
-    "main.js.map": "/Calculator-React/public/static/js/main.dba17f31.chunk.js.map",
-    "runtime-main.js": "/Calculator-React/public/static/js/runtime-main.f2a26912.js",
-    "runtime-main.js.map": "/Calculator-React/public/static/js/runtime-main.f2a26912.js.map",
-    "static/js/2.6033af1e.chunk.js": "/Calculator-React/public/static/js/2.6033af1e.chunk.js",
-    "static/js/2.6033af1e.chunk.js.map": "/Calculator-React/public/static/js/2.6033af1e.chunk.js.map",
-    "index.html": "/Calculator-React/public/index.html",
-    "precache-manifest.c4ab8a1074243400d2c09b339c08e8b8.js": "/Calculator-React/public/precache-manifest.c4ab8a1074243400d2c09b339c08e8b8.js",
-    "service-worker.js": "/Calculator-React/public/service-worker.js",
-    "static/css/main.2b262fa1.chunk.css.map": "/Calculator-React/public/static/css/main.2b262fa1.chunk.css.map",
-    "static/js/2.6033af1e.chunk.js.LICENSE.txt": "/Calculator-React/public/static/js/2.6033af1e.chunk.js.LICENSE.txt"
+    "main.css": "/Calculator-React/static/css/main.2b262fa1.chunk.css",
+    "main.js": "/Calculator-React/static/js/main.dba17f31.chunk.js",
+    "main.js.map": "/Calculator-React/static/js/main.dba17f31.chunk.js.map",
+    "runtime-main.js": "/Calculator-React/static/js/runtime-main.fa3cfcc8.js",
+    "runtime-main.js.map": "/Calculator-React/static/js/runtime-main.fa3cfcc8.js.map",
+    "static/js/2.6033af1e.chunk.js": "/Calculator-React/static/js/2.6033af1e.chunk.js",
+    "static/js/2.6033af1e.chunk.js.map": "/Calculator-React/static/js/2.6033af1e.chunk.js.map",
+    "index.html": "/Calculator-React/index.html",
+    "precache-manifest.d51389c69b8e50fdeb0d29395790a8ce.js": "/Calculator-React/precache-manifest.d51389c69b8e50fdeb0d29395790a8ce.js",
+    "service-worker.js": "/Calculator-React/service-worker.js",
+    "static/css/main.2b262fa1.chunk.css.map": "/Calculator-React/static/css/main.2b262fa1.chunk.css.map",
+    "static/js/2.6033af1e.chunk.js.LICENSE.txt": "/Calculator-React/static/js/2.6033af1e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f2a26912.js",
+    "static/js/runtime-main.fa3cfcc8.js",
     "static/js/2.6033af1e.chunk.js",
     "static/css/main.2b262fa1.chunk.css",
     "static/js/main.dba17f31.chunk.js"
