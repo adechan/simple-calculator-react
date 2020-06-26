@@ -82,7 +82,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
         // if the value is a NUMBER
         if (Number.isInteger(parseInt(buttonPressed)) == true || buttonPressed === '.' || buttonPressed == '+/-')
         {
-            if (displayValue != null && displayValue != "0")
+            if (displayValue != null && displayValue != "0" && operation == null)
             {
                 displayValue += buttonPressed;
             }
@@ -113,7 +113,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
         {
             setOperation(buttonPressed);
             setPrevious(displayValue);
-            setDisplayValue("0");
+            setDisplayValue(displayValue);
         }
 
         if (previous !== null)
