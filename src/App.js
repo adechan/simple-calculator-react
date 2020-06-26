@@ -8,9 +8,9 @@ import Buttons from './Components/Calculator/Buttons';
 import './App.css';
 import './Components/Calculator/component';
 
-function App() {
-
-  const [displayValue, setDisplayValue] = useState("0");
+function App() 
+{
+  const [displayValue, setDisplayValue] = useState(" 0");
   const [operation, setOperation] = useState("");
   const [previous, setPrevious] = useState("");
   const [next, setNext] = useState("");
@@ -25,14 +25,14 @@ function App() {
       <Display displayValue = {displayValue}/>
 
       <Buttons 
-      setDisplayValue = {setDisplayValue} 
-      displayValue = {displayValue} 
-      setOperation = {setOperation} 
-      operation = {operation}
-      previous = {previous}
-      setPrevious = {setPrevious}
-      next = {next}
-      setNext = {setNext}
+        setDisplayValue = {setDisplayValue} 
+        displayValue = {displayValue} 
+        setOperation = {setOperation} 
+        operation = {operation}
+        previous = {previous}
+        setPrevious = {setPrevious}
+        next = {next}
+        setNext = {setNext}
       />
       
     </div>

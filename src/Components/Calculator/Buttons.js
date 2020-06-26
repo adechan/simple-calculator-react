@@ -15,25 +15,25 @@ const Buttons = ({setDisplayValue, displayValue, setOperation, operation, setPre
         <Container> 
             <Div>
                 <Button value = 'AC' 
-                setDisplayValue = {setDisplayValue}
-                displayValue = {displayValue}
-                setOperation = {setOperation}
-                operation = {operation}
-                previous = {previous}
-                setPrevious = {setPrevious}
-                next = {next}
-                setNext = {setNext}
+                    setDisplayValue = {setDisplayValue}
+                    displayValue = {displayValue}
+                    setOperation = {setOperation}
+                    operation = {operation}
+                    previous = {previous}
+                    setPrevious = {setPrevious}
+                    next = {next}
+                    setNext = {setNext}
                 />
 
                 <Button value = '+/-' 
-                setDisplayValue = {setDisplayValue}
-                displayValue = {displayValue}
-                setOperation = {setOperation}
-                operation = {operation}
-                previous = {previous}
-                setPrevious = {setPrevious}
-                next = {next}
-                setNext = {setNext}
+                    setDisplayValue = {setDisplayValue}
+                    displayValue = {displayValue}
+                    setOperation = {setOperation}
+                    operation = {operation}
+                    previous = {previous}
+                    setPrevious = {setPrevious}
+                    next = {next}
+                    setNext = {setNext}
                 />
 
                 <Button value = '%' 

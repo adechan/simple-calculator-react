@@ -68,6 +68,8 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
                 result = number1 % number2;
                 break;
             case '×':
+                console.log('number1: ' + number1);
+                console.log('number2: ' + number2);
                 result = number1 * number2;
                 break;
         }
@@ -78,64 +80,81 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
     const buttonClicked = () =>
     {
         const buttonPressed = {value}.value;
-
+        console.log("[buttonClicked]: " + buttonPressed);
+        console.log("[buttonClicked start] displayValue: " + displayValue);
+        // displayValue = {op}(buttonPressed)
+        
         // if the value is a NUMBER
         if (Number.isInteger(parseInt(buttonPressed)) == true || buttonPressed === '.' || buttonPressed == '+/-')
-        {
-            if (displayValue != null && displayValue != "0" && operation == null)
-            {
-                displayValue += buttonPressed;
-            }
-            else
+        {   
+            if ((String(displayValue).indexOf(" ") !== -1) || (!(String(displayValue).indexOf(" ") !== -1) && previous !== "" && operation !== ""))
             {
                 displayValue = buttonPressed;
             }
+            else if (next === "" && 
+                !(operation !== "" && next === "" && previous !== ""))
+                // !())
+            {
+                displayValue += buttonPressed;
+                console.log("[buttonClicked else if (next === \"\")] displayValue: " + displayValue);
+            }
 
-            if (buttonPressed !== '.' && buttonPressed !== '0')
+            // 
+            // to exclude multiplication: displayValue === operation && next !== "" && previous !== ""
+            // to reset state after calculation: displayValue !=== "" && previous === "" && operation === "" && next === ""
+
+            if (buttonPressed !== '.' && buttonPressed !== '0' && operation === "")
             {
                 displayValue = '' + parseFloat(displayValue);
             }
 
-            if (buttonPressed == '+/-')
+            if (buttonPressed === '+/-')
             {
+                console.log("[buttonClicked 3] displayValue: " + displayValue);
                 displayValue = displayValue - 2 * displayValue;
+                console.log("[buttonClicked 4] displayValue: " + displayValue);
             }
 
             // console.log("display value: " + displayValue);
         }
         setDisplayValue(displayValue);
 
-        if (buttonPressed == '+' || 
-            buttonPressed == '-' || 
-            buttonPressed == '÷' ||
-            buttonPressed == '%' ||
-            buttonPressed == '×')
+        if (buttonPressed === '+' || 
+            buttonPressed === '-' || 
+            buttonPressed === '÷' ||
+            buttonPressed === '%' ||
+            buttonPressed === '×')
         {
             setOperation(buttonPressed);
             setPrevious(displayValue);
-            setDisplayValue(displayValue);
+            displayValue = buttonPressed
+            setDisplayValue(buttonPressed);
         }
 
-        if (previous !== null)
+        if (previous !== "")
         {
             setNext(displayValue);
         }
 
-        if (operation !== null && buttonPressed == "=")
+        if (operation !== "" && buttonPressed === "=")
         {
             let result = Calculate(operation, parseFloat(previous), parseFloat(next));
 
-            setDisplayValue(result);
+            setOperation("");
+            setPrevious("");
+            setNext("");
+            setDisplayValue(' ' + result);
         }
 
         if (buttonPressed == "AC")
         {
-            setDisplayValue("0");
+            setDisplayValue(" 0");
             setOperation("");
             setPrevious("");
             setNext("");
         }
         
+        console.log("[buttonClicked: " + buttonPressed +  "] displayValue: " + displayValue);
     }
 
     return ( 
