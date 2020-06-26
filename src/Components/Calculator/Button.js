@@ -38,12 +38,12 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
     const Button = styled.button`
     background-color: ${backgroundColour};
     padding: 0px;
-    height: 8.2vw;
+    height: 100%;
     width: ${widthButton};
     border: 1px solid rgb(133, 134, 148, .45);
     color: ${textColour};
     font-family: 'Sans Sans', sans-serif;
-    font-size: 60px;
+    font-size: 8vh;
     font-weight: normal;
     padding: 0px;
     margin: 0px;

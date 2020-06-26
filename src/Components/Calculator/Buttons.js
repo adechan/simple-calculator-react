@@ -8,6 +8,7 @@ const Buttons = ({setDisplayValue, displayValue, setOperation, operation, setPre
     `
 
     const Div = styled.div`
+    height: 17vh;
     `
  
     return ( 
