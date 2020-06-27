@@ -81,22 +81,44 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
     {
         const buttonPressed = {value}.value;
         console.log("[buttonClicked]: " + buttonPressed);
-        console.log("[buttonClicked start] displayValue: " + displayValue);
+        console.log("[buttonClicked start] displayValue: >" + displayValue + "<");
         // displayValue = {op}(buttonPressed)
         
         // if the value is a NUMBER
         if (Number.isInteger(parseInt(buttonPressed)) == true || buttonPressed === '.' || buttonPressed == '+/-')
         {   
-            if ((String(displayValue).indexOf(" ") !== -1) || (!(String(displayValue).indexOf(" ") !== -1) && previous !== "" && operation !== ""))
+            // 1. " " is found anywhere in the "displayValue" OR (start of calculator)
+            // 2. " " is not found anywhere in the "displayValue" AND "previous" has a value AND "operation" has a value (reseting, start new calculation)
+            // THEN just replace "displayValue" with a number
+
+            if ((String(displayValue).indexOf(" ") !== -1) || 
+                (String(displayValue).indexOf(" ") === -1 && previous !== "" && operation === ""))
             {
+                console.log("[buttonClicked 1] displayValue: >" + displayValue + "<");
                 displayValue = buttonPressed;
+                console.log("[buttonClicked 2] displayValue: >" + displayValue + "<");
             }
-            else if (next === "" && 
-                !(operation !== "" && next === "" && previous !== ""))
-                // !())
+
+            // else 
+            // {
+            //     console.log("[buttonClicked 3] displayValue: " + displayValue);
+            //     displayValue += buttonPressed;
+            //     console.log("[buttonClicked 4] displayValue: " + displayValue);
+            //     // console.log("[buttonClicked else if (next === \"\")] displayValue: " + displayValue);
+            // }
+            else if (next === "" || 
+                    !(operation !== "" && next === "" && previous !== ""))
             {
+                console.log("[buttonClicked 3] displayValue: " + displayValue);
+
+                if (Number.isInteger(parseInt(displayValue)) == false)
+                {
+                    displayValue = "";   
+                }
+
                 displayValue += buttonPressed;
-                console.log("[buttonClicked else if (next === \"\")] displayValue: " + displayValue);
+                console.log("[buttonClicked 4] displayValue: " + displayValue);
+
             }
 
             // 
