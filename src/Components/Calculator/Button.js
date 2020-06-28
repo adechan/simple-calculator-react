@@ -62,7 +62,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
             case '+':
                 result = number1 + number2;
                 break;
-            case '-':
+            case '−':
                 result = number1 - number2;
                 break;
             case '÷':
@@ -123,7 +123,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
                 displayValue = '' + parseFloat(displayValue);
             }
 
-            if (buttonPressed === '+/-')
+            if (buttonPressed === '+/−')
             {
                 console.log("[buttonClicked 3] displayValue: " + displayValue);
                 displayValue = displayValue - 2 * displayValue;
@@ -135,7 +135,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
         setDisplayValue(displayValue);
 
         if (buttonPressed === '+' || 
-            buttonPressed === '-' || 
+            buttonPressed === '−' || 
             buttonPressed === '÷' ||
             buttonPressed === '%' ||
             buttonPressed === '×')
