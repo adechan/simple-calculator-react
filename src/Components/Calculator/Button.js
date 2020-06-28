@@ -46,7 +46,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
     font-family: 'Sans Sans', sans-serif;
     font-size: 4vw;
     @media (max-width: 420px) {
-        font-size: 7vw;
+        font-size: 8vw;
     }
     font-weight: normal;
     padding: 0px;
