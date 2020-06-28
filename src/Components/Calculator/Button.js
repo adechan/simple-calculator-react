@@ -148,8 +148,15 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
             buttonPressed === '×')
         {
             setOperation(buttonPressed);
-            setPrevious(displayValue);
+
+            if (Number.isInteger(parseInt(displayValue)) == true)
+            {
+                setPrevious(displayValue);
+            }
+            
+
             displayValue = buttonPressed
+
             setDisplayValue(buttonPressed);
         }
 
