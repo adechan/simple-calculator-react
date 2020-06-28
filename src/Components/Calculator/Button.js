@@ -68,8 +68,6 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
                 result = number1 % number2;
                 break;
             case '×':
-                console.log('number1: ' + number1);
-                console.log('number2: ' + number2);
                 result = number1 * number2;
                 break;
         }
@@ -88,7 +86,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
         if (Number.isInteger(parseInt(buttonPressed)) == true || buttonPressed === '.' || buttonPressed == '+/-')
         {   
             // 1. " " is found anywhere in the "displayValue" OR (start of calculator)
-            // 2. " " is not found anywhere in the "displayValue" AND "previous" has a value AND "operation" has a value (reseting, start new calculation)
+            // 2. " " is not found anywhere in the "displayValue" AND "previous" has a value AND "operation" doesn't have a value (reseting, start new calculation)
             // THEN just replace "displayValue" with a number
 
             if ((String(displayValue).indexOf(" ") !== -1) || 
@@ -98,14 +96,6 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
                 displayValue = buttonPressed;
                 console.log("[buttonClicked 2] displayValue: >" + displayValue + "<");
             }
-
-            // else 
-            // {
-            //     console.log("[buttonClicked 3] displayValue: " + displayValue);
-            //     displayValue += buttonPressed;
-            //     console.log("[buttonClicked 4] displayValue: " + displayValue);
-            //     // console.log("[buttonClicked else if (next === \"\")] displayValue: " + displayValue);
-            // }
             else if (next === "" || 
                     !(operation !== "" && next === "" && previous !== ""))
             {
@@ -121,7 +111,6 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
 
             }
 
-            // 
             // to exclude multiplication: displayValue === operation && next !== "" && previous !== ""
             // to reset state after calculation: displayValue !=== "" && previous === "" && operation === "" && next === ""
 
@@ -153,7 +142,6 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
             {
                 setPrevious(displayValue);
             }
-            
 
             displayValue = buttonPressed
 
