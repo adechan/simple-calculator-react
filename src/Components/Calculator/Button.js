@@ -43,7 +43,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
     border: 1px solid rgb(133, 134, 148, .45);
     color: ${textColour};
     font-family: 'Sans Sans', sans-serif;
-    font-size: 8vh;
+    font-size: 4vw;
     font-weight: normal;
     padding: 0px;
     margin: 0px;
