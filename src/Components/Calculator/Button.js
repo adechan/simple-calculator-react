@@ -44,9 +44,9 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
     border: 1px solid rgb(133, 134, 148, .45);
     color: ${textColour};
     font-family: 'Sans Sans', sans-serif;
-    font-size: 7vh;
+    font-size: 4vw;
     @media (max-width: 420px) {
-        font-size: 5vh;
+        font-size: 7vw;
     }
     font-weight: normal;
     padding: 0px;
