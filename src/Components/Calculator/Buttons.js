@@ -25,7 +25,7 @@ const Buttons = ({setDisplayValue, displayValue, setOperation, operation, setPre
                     setNext = {setNext}
                 />
 
-                <Button value = '+/-' 
+                <Button value = '+/−' 
                     setDisplayValue = {setDisplayValue}
                     displayValue = {displayValue}
                     setOperation = {setOperation}
@@ -141,7 +141,7 @@ const Buttons = ({setDisplayValue, displayValue, setOperation, operation, setPre
                 setNext = {setNext}
                 />
 
-                <Button value = '-' 
+                <Button value = '−' 
                 setDisplayValue = {setDisplayValue}
                 displayValue = {displayValue}
                 setOperation = {setOperation}

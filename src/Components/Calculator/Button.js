@@ -62,7 +62,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
             case '+':
                 result = number1 + number2;
                 break;
-            case '-':
+            case '−':
                 result = number1 - number2;
                 break;
             case '÷':
@@ -87,7 +87,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
         // displayValue = {op}(buttonPressed)
         
         // if the value is a NUMBER
-        if (Number.isInteger(parseInt(buttonPressed)) == true || buttonPressed === '.' || buttonPressed == '+/-')
+        if (Number.isInteger(parseInt(buttonPressed)) == true || buttonPressed === '.' || buttonPressed == '+/−')
         {   
             // 1. " " is found anywhere in the "displayValue" OR (start of calculator)
             // 2. " " is not found anywhere in the "displayValue" AND "previous" has a value AND "operation" doesn't have a value (reseting, start new calculation)
@@ -123,7 +123,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
                 displayValue = '' + parseFloat(displayValue);
             }
 
-            if (buttonPressed === '+/-')
+            if (buttonPressed === '+/−')
             {
                 console.log("[buttonClicked 3] displayValue: " + displayValue);
                 displayValue = displayValue - 2 * displayValue;
@@ -135,7 +135,7 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
         setDisplayValue(displayValue);
 
         if (buttonPressed === '+' || 
-            buttonPressed === '-' || 
+            buttonPressed === '−' || 
             buttonPressed === '÷' ||
             buttonPressed === '%' ||
             buttonPressed === '×')
