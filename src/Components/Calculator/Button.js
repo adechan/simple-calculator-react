@@ -125,9 +125,9 @@ const Button = ({value, width, setDisplayValue, displayValue, operation, setOper
 
             if (buttonPressed === '+/−')
             {
-                console.log("[buttonClicked 3] displayValue: " + displayValue);
+                console.log("[buttonClicked 5] displayValue: " + displayValue);
                 displayValue = displayValue - 2 * displayValue;
-                console.log("[buttonClicked 4] displayValue: " + displayValue);
+                console.log("[buttonClicked 6] displayValue: " + displayValue);
             }
 
             // console.log("display value: " + displayValue);
